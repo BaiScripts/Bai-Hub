@@ -1,3 +1,5 @@
+--Pls Don't Steal
+
 local player = game.Players.LocalPlayer
 
 local InfiniteJumpEnabled = true
@@ -187,7 +189,7 @@ Callback = <function> - The function of the button.
 Tab:AddButton({
 	Name = "Anti-Fall",
 	Callback = function()
-      		
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/zephyr10101/AntiFall/main/Script"))()
   	end    
 })
 
