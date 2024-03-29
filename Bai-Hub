@@ -10,7 +10,7 @@ game:GetService("UserInputService").JumpRequest:connect(function()
 	end
 end)
 
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/BaiScripts/Bai-Library/main/Bai-Library')))()
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
 local Window = OrionLib:MakeWindow({Name = "Bai Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
