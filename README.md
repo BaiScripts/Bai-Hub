@@ -12,3 +12,5 @@ Work In Executor :
 
 ------------------------------------
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BaiScripts/Bai-Hub/main/Bai-Hub"))()
+------------------------------------
