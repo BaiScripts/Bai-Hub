@@ -4,6 +4,9 @@ local player = game.Players.LocalPlayer
 local key = "SubsBai"
 local dkey = false
 local InfiniteJumpEnabled = true
+local player1 = game.Players.LocalPlayer.Character.HumanoidRootPart
+local player2 = ""
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
 
 game:GetService("UserInputService").JumpRequest:connect(function()
 	if not InfiniteJumpEnabled then
@@ -50,7 +53,7 @@ Name = <string> - The name of the section.
 Tab:AddTextbox({
 	Name = "Fill In To Activate The Script",
 	Default = "Input Key",
-	TextDisappear = true,
+	TextDisappear = false,
 	Callback = function(Value)
 		if Value == key then
 		dkey = true
@@ -79,6 +82,31 @@ Content = <string> - The content of the notification.
 Image = <string> - The icon of the notification.
 Time = <number> - The duration of the notfication.
 ]]
+
+local Section = Tab:AddSection({
+	Name = "Teleport"
+})
+
+--[[
+Name = <string> - The name of the section.
+]]
+
+Tab:AddTextbox({
+	Name = "Tp",
+	Default = "Input Username",
+	TextDisappear = false,
+	Callback = function(Value)
+		player2 = Value
+end})
+
+Tab:AddButton({
+	Name = "Click To Tp",
+	Callback = function()
+	          if dkey then
+              humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+              player1.CFrame = game.Players[player2].Character.HumanoidRootPart.CFrame
+              end
+end})
 
 local Section = Tab:AddSection({
 	Name = "Player"
