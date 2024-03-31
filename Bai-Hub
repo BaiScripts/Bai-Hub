@@ -168,6 +168,19 @@ Name = <string> - The name of the button.
 Callback = <function> - The function of the button.
 ]]
 
+Tab:AddButton({
+	Name = "Esp",
+	Callback = function()
+	          if dkey then
+              loadstring(game:HttpGet("https://raw.githubusercontent.com/BaiScripts/Esp-Script/main/Esp%20Script"))()
+              end
+end})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
 Tab:AddToggle({
 	Name = "Inf Jump",
 	Default = false,
