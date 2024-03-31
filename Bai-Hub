@@ -53,7 +53,7 @@ Name = <string> - The name of the section.
 Tab:AddTextbox({
 	Name = "Fill In To Activate The Script",
 	Default = "Input Key",
-	TextDisappear = false,
+	TextDisappear = true,
 	Callback = function(Value)
 		if Value == key then
 		dkey = true
